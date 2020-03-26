@@ -1,0 +1,274 @@
+
+/*setting fond family name*/
+body {
+	font-family: "Roboto Slab", sans-serif;
+	margin: 0px;
+	
+  }
+  /*if you click a link it changes to this colour with a slow transition */
+  a:active {
+	  color: lightseagreen;
+	  transition: ease-in;
+  }
+
+  .container {
+	display: grid;
+	grid-template-columns: 1fr;
+  }
+  /* Portfolio Style */
+  .nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+  }
+  
+  .left-side {
+	display: flex;
+  }
+  
+  .nav-wrapper > .left-side > div {
+	margin-right: 20px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+  }
+  
+  .nav-link-wrapper {
+	height: 22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+  }
+  
+   
+  .nav-link-wrapper a {
+	color: #8a8a8a;
+	text-decoration: none;
+	transition: color 0.5s;
+  }
+  
+  .nav-link-wrapper:hover {
+	border-bottom: 1px solid black;
+  }
+  /* changes when mouse hovers over top of image*/
+  .nav-link-wrapper a:hover {
+	color: black;
+  }
+  /*setting a display grid with 3 columns for the images to be in */
+  .portfolio-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .portfolio-item-wrapper {
+	position: relative;
+  }
+  
+  .portfolio-img-background {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 350px;
+	width: 100%;
+  }
+  /*allowing the img text to be over the top of the images */
+  .img-text-wrapper {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: xx-large;
+	color: rgb(255, 255, 255);
+  }
+  
+    .img-text-wrapper:hover {
+	color: yellowgreen;
+	font-weight: 600;
+  }
+
+  
+  /* About page styles */
+  .two-column-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+  }
+  
+  .profile-image-wrapper img {
+	width: 100%;
+  }
+  
+  .profile-content-wrapper {
+	padding: 30px;
+  }
+  
+  .profile-content-wrapper h1 {
+	color: yellowgreen;
+
+	}
+	/* shop service with a 1 column grid */
+.shop-serivces-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	  
+}
+.shop-service-wrapper {
+	position: relative;
+  }
+  /*image of shop styles */
+  .img-background {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 500px;
+	width: 100%;
+  }
+  /* allows the text to be layed over the top of image*/
+  .img-text {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: xx-large;
+	color: white;
+  }
+  /* text colour changes to yellow green when mouse govers over the top of it */
+    .img-text:hover {
+	color: yellowgreen;
+	font-weight: 600;
+  }
+  /* button styles */
+  .button {
+	transition-duration: 4ms;
+	background-color: transparent; 
+	border: none;
+	color: rgb(223, 156, 31);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: larger;
+	margin: 4px 2px;
+	cursor: pointer;
+	
+  }
+  /* cv styles */
+  .cv-images-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .cv-image-wrapper {
+	position: relative;
+  }
+  /* table styles for cv */
+  table, th, td {
+	border: 2px solid black;
+	border-collapse: collapse;
+  }
+  /* padding for table */
+  th, td {
+	padding: 20px;
+  }
+
+  table {
+	font-size: x-large;
+ 	position: relative;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+  }
+	 
+  input {
+	font-size: 30px;
+	color: black;
+	background-color: transparent;
+ 	cursor: pointer;
+ 	border: none;
+ 	text-align: center;
+ 	text-decoration: none;
+	}
+	  /* interest styles */
+	.interest-img-background {
+	background-size: cover;
+	background-position: center;	
+	background-repeat: no-repeat;	
+	height: 500px;
+	width: 100%;
+	}
+	/* 2 columns for interest items */
+	.interest-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	}
+		 
+	.interest-item-wrapper {
+	position: relative;
+	}  
+
+	.interest-img-background {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 600px;
+	width: 100%;
+	}
+	/* setting text over the image */
+	.interest-text {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align:center;
+	padding-left: 325px;
+	
+	font-size:xx-large;
+	color: rgb(255, 255, 255);
+	 }
+	  /* changes colour to yellowgreen */
+	.interest-text:hover {
+	color: yellowgreen;
+	font-weight: 600;
+	}
+	/* column styles */
+	.column {
+	float:left;
+	width: 33%;
+	padding: 10px;
+	height: 10px; 
+	}
+	.row::after {
+	content: "";
+	display: table;
+	clear: both;	
+	}
+	/* giving the ul in travel and sports a padding of 700px */
+	.list-sports > ul {
+		padding-left: 700px;
+	}
+
+	.list-travel >ul {
+		padding-left:700px
+	}
+	/* jquery styles */
+	.title {
+		display: block;
+		width: 100%;
+		height: 38px;
+		line-height: 38px;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		background: #ddd;
+	  }

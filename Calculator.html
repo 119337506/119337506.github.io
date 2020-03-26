@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- setting lanuage to english-->
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <!-- name that appears on the tab of the page in a browser-->
+  <title>Calculator - Ginger Consulting</title>
+  <!-- setting the font family through google-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <!-- link to css-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <div class="container">
+    <!--navigation bar links -->
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper">
+          <a href="mainpage.html">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="Interests.html">Interests & Hobbies </a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="CV.html"> Curriculum Vitae</a>
+      </div>
+
+      <div class="nav-link-wrapper">
+          <a href= "Calculator.html">Online Calculator</a>
+      </div>
+
+      <div class="nav-link-wrapper">
+          <a href="shop.html"> Our Consulting Shop</a>
+      </div>
+     </div>
+      
+      <!-- navigation bar company name-->
+      <div class="right-side">
+        <div class="brand">
+          Ginger Consulting
+        </div>
+      </div>
+    </div>
+   </div>
+   <!-- setting up a form for the calculator-->
+   <!--aligning all the content into the center of the screen-->
+   <center>
+    <div class="form">
+      <!-- setting name for form and also setting the php to calculator -->
+      <form name="intCalc" method="post" action="calculator.php">
+        <h1>Ginger Consulting</h1>
+        <!-- link to bring customer to the packages if they'd like to learn more about them-->
+        <p>Click to learn about our <a href="shop.html">"Package selections"</a></p>
+        <hr>
+  
+      <!-- creating a table to hold the package selections-->
+      <table cellspacing="25">
+           <!-- setting a price for each package selection so that it can be used when a customer clicks on the radio button-->                     
+          <tr>
+              <td>'Hyperautomation' at €200</td>
+              <td><input type="radio" id="Hyperautomation" name="rdoGroup" value="200"  required /></td>
+          </tr>
+          <tr>
+              <td>'Multiexperience' at €500</td>
+              <td><input type="radio" id="Multiexperience" name="rdoGroup" value="500" required /></td>
+          </tr>
+          <tr>
+              <td>'Distributed Cloud' at €1000</td>
+              <td><input type="radio" id="DistributedCloud" name="rdoGroup" value="1000" required /></td>
+          </tr>
+      </table>
+  
+  <hr>
+      
+        <!-- creating a table to show the output of the functions and the final product-->
+           <table cellspacing="25">
+      <tr>
+        <!-- the heading of the table-->
+              <td><b>Fees applicable:</b></td>
+              <td><b>Amount in €</b></td>
+      </tr>
+          <tr>
+            <!-- setting each package to readonly so customer cannot alter the prices as they are fixed-->
+              <td>Package price in €</td>
+              <td><input type="text" id="txtSubTotal" name="txtSubTotal" readonly  required/></td>
+          </tr>
+          <tr>
+            <td>Add (+) VAT at 20%  </td>
+            <td><input type="text" id="txtVAT" name="txtVAT" readonly required /></td>
+        </tr>
+          <tr>
+              <td>Discount (-) at 5% of package</td>
+              <td><input type="text" id="txtDiscount" name="txtDiscount" readonly  required/></td>
+          </tr>    
+          <tr>
+              <td>Total in €</td>
+              <td><input type="text" id="txtTotal" name="txtTotal" value="" readonly required/></td>
+          </tr>
+      </table>
+
+ 
+      <hr>
+    <!--making a button for a calculation and also for a clear selction-->
+      
+        <input type="button" name="btnCalc" id="btnCalc" onclick="calcSub()" value="Calculation"/>
+        <input type="reset" name="btnClear" id="btnClear" value="Clear Selection"/>
+            
+    </center> 
+    </form>
+  </div>
+  
+<br><br>
+<!--Using js for the calculator-->
+<!---->
+  <script type="text/javascript">
+    // creating a function to hold all the variables and also the name of the package selections
+    function calcSub(){
+      // "document.getelementbyid" searches and pulls the value of the name thats within the quotes
+        var argSelection = parseFloat(document.getElementById('txtSubTotal').value);
+        var Hyperautomation = parseFloat(document.getElementById('Hyperautomation').value);
+         var Multiexperience = parseFloat(document.getElementById('Multiexperience').value);
+         var DistributedCloud = parseFloat(document.getElementById('DistributedCloud').value);
+         
+            // If statement showing that if 'hyperautomation' is checked then the txtsubtotal = the value from table above and then sets this value into the function below
+         if (document.getElementById('Hyperautomation').checked) {
+          document.intCalc.txtSubTotal.value = Hyperautomation;
+          argSelection = Hyperautomation;
+          calcVatTotal(argSelection);
+             
+          }
+          // If statement showing that if 'multiexperience' is checked then the txtsubtotal = the value from table above and then sets this value into the function below
+         else if (document.getElementById('Multiexperience').checked) {
+          document.intCalc.txtSubTotal.value = Multiexperience;
+          argSelection = Multiexperience;
+          calcVatTotal(argSelection);
+                 
+          }
+             // If statement showing that if 'distributed cloud' is checked then the txtsubtotal = the value from table above and then sets this value into the function below
+         else if (document.getElementById('DistributedCloud').checked) {
+           document.intCalc.txtSubTotal.value = DistributedCloud;
+           argSelection = DistributedCloud;
+           calcVatTotal(argSelection);
+          }
+    }
+          
+   
+    
+        // this function performs the calculations of the package selections and then inputs it into the variable names
+         function calcVatTotal(parmSelection) {
+          var argsubTotal = parseFloat(parmSelection);
+          var argvatAmt = parseFloat(argsubTotal * .20);
+          var argdiscountAmt = parseFloat(argsubTotal * .05);
+          var argtotalPrice = parseFloat(argsubTotal - argdiscountAmt + argvatAmt);
+         calcDisp(argsubTotal,argvatAmt, argdiscountAmt,argtotalPrice);
+             
+           
+          }
+          // this functions takes the value from the variable names that has already been inputed and then enters it into
+        function calcDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice){
+          document.intCalc.txtSubTotal.value = parmsubTotal;
+          document.intCalc.txtDiscount.value = parmdiscountAmt;
+          document.intCalc.txtVAT.value = parmvatAmt;
+          document.intCalc.txtTotal.value = parmtotalPrice;
+}
+ </script>
+
+    
+   </center>
+  </body>
+  <!-- footer for the company name with a copyright-->
+  <footer>
+    <center><h3>&copy; Ginger Consulting <h3> </center>
+  </footer>
+</html>    

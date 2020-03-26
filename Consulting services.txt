@@ -1,0 +1,18 @@
+Hyperautomation is a brand new trend that is taking 2020 by storm. This new trend has been ranked number one on Gartner's list of Top 10 Strategic Technology Trends for 2020.
+Hyperautomation brings together several components of process automation, ranging from integrating tools to amplifying the ability to automate work.
+It's main process starts with 'Robotic Process Automation (RPA)' at the very centre. It also brances into applying modern elements of 'Artificial Intelligence (AI)'.
+Would you like to know more?
+https://www.uipath.com/rpa/hyperautomation
+
+Multiexperience is a thriving trend emergining in 2020. This trend has been ranked one of Gartners Top 10 Strategic Technology trends for 2020. 2020 has been marked as the year when the technology-literate people are going to be replaced by people-literate technology.
+Multiexperience transforms the idea of single interaction with computers into a large scale multisensory and multitouchpoint technology
+Valve and HTC's 'VIVE' is the first-of-its-kind virtual reality system which emerged onto the market in 2015 and has since captivated its audience
+Quantum is multiexperience platform created by Temenos and Kony and it is expected by the year 2023, 25% of mobile apps, web apps and conversational apps at large enterprises will be built using the multiexperience development platform.
+Would you like to know more?
+https://www.kony.com/
+
+Distributed cloud is the application of cloud computing technologies to interconect data from numerous locations using storage systems.
+The Cubbit Cell is experimenting with new technology to evolve cloud computing.
+The Cubbit Cell has claimed that 'Every 4 TB stored on Cubbit instead of traditional cloud providers save the equivalent carbon footprint of an additional fridge (~350 kWh/year)'
+Would you like to know more?
+https://www.cubbit.io/
